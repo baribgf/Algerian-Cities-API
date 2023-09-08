@@ -65,11 +65,11 @@ app.get('/cities', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.sendFile(join(ROOT_PATH, 'public/index.html'));
+    res.sendFile(join(__dirname, 'public/index.html'));
 })
 
 app.get('/favicon.ico', (req, res) => {
-    res.sendFile(join(ROOT_PATH, 'public/favicon.ico'))
+    res.sendFile(join(__dirname, 'public/favicon.ico'))
 })
 
 app.listen(PORT, () => {
