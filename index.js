@@ -6,7 +6,7 @@ const app = express();
 const PORT = 8081;
 
 firebaseAdmin.initializeApp({
-    credential: firebaseAdmin.credential.cert(require(join(__dirname, 'private/algerian-cities-db-firebase-adminsdk.json'))),
+    credential: firebaseAdmin.credential.cert(require('/etc/secrets/algerian-cities-db-firebase-adminsdk.json')),
     databaseURL: "https://algerian-cities-db-default-rtdb.europe-west1.firebasedatabase.app"
 });
 
